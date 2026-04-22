@@ -7,5 +7,7 @@ typedef struct Node
 }Node;
 
 extern volatile int flag;
-
+void enqueue(char* command);
+char* dequeue();
+void simulate_uart_receive(char* cmd);
 #endif
