@@ -36,3 +36,15 @@ a linked list queue, and processed one by one in a main loop.
 - `STATUS` — print current state of all devices and session command count
 
 ## Build and Run
+gcc main.c uart.c -o uart_handler
+./uart_handler
+## Sample Output
+[UART] Command received: LIGHT_ON
+[UART] Command received: FAN_ON
+[UART] Command received: STATUS
+[PROC] Executing: LIGHT_ON
+[PROC] Executing: FAN_ON
+[PROC] Executing: STATUS
+Light: ON
+Fan:   ON
+Commands processed this session: 3
