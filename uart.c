@@ -43,7 +43,7 @@ char* dequeue() // remove the node from the front of the queue and returns the c
 	Node* temp = head;
 	head = temp->next; //declared new head
 	free(temp);	//removed head
-	
+	commandCounter++;	
 	return buffer;
 }
 
@@ -52,4 +52,9 @@ void simulate_uart_receive(char* cmd) //it simulates what a hardware interrupt w
 	printf("[UART] Command received: %s\n", cmd);
 	enqueue(cmd);
        flag = 1;	
+}
+
+int getCommandCount()
+{
+    return commandCounter;
 }
